@@ -1,3 +1,11 @@
+libfastjson (0.99.9-1+deb11u1) bullseye-security; urgency=high
+
+  * Non-maintainer upload by the LTS Team.
+  * CVE-2020-12762
+    fix for out-of-bounds write with large JSON file
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 25 Jul 2025 19:03:02 +0200
+
 libfastjson (0.99.9-1) unstable; urgency=medium
 
   [ Ondřej Nový ]
