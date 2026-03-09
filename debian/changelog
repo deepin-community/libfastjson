@@ -1,10 +1,30 @@
-libfastjson (0.99.9-1+deb11u1) bullseye-security; urgency=high
+libfastjson (1.2304.0-2) unstable; urgency=medium
 
-  * Non-maintainer upload by the LTS Team.
-  * CVE-2020-12762
-    fix for out-of-bounds write with large JSON file
+  * Bump Standards-Version to 4.7.0, no further changes required
+  * Replace obsolete pkg-config Build-Depends with pkgconf
 
- -- Thorsten Alteholz <debian@alteholz.de>  Fri, 25 Jul 2025 19:03:02 +0200
+ -- Michael Biebl <biebl@debian.org>  Wed, 25 Sep 2024 13:55:14 +0200
+
+libfastjson (1.2304.0-1) unstable; urgency=medium
+
+  * New upstream version 1.2304.0
+    - Fixes integer overflow and out-of-bounds write via a large JSON file.
+      This issue was originally found in the json-c library.
+      (CVE-2020-12762, Closes: #1035302)
+  * Bump Standards-Version to 4.6.2
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 03 May 2023 12:48:03 +0200
+
+libfastjson (0.99.9-2) unstable; urgency=medium
+
+  * Enable all hardening build flags
+  * Drop no longer needed override for dh_missing.
+    In compat 13 and later, --fail-missing is the default.
+  * Use execute_before instead of override for dh_install
+  * Bump Standards-Version to 4.6.1
+  * Use https in watch file
+
+ -- Michael Biebl <biebl@debian.org>  Fri, 02 Sep 2022 13:02:31 +0200
 
 libfastjson (0.99.9-1) unstable; urgency=medium
 

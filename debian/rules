@@ -1,11 +1,9 @@
 #!/usr/bin/make -f
 
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
 	dh $@
 
-override_dh_install:
+execute_before_dh_install:
 	find debian/tmp -name '*.la' -print -delete
-	dh_install
-
-override_dh_missing:
-	dh_missing --fail-missing
